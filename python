@@ -2,7 +2,7 @@ import pandas as pd
 import joblib
 
 
-model_path = "/content/laptop_buy_decision_tree.joblib"
+model_path = "laptop_buy_decision_tree.joblib"
 model = joblib.load(model_path)
 
 
