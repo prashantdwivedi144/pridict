@@ -1,0 +1,23 @@
+import pandas as pd
+import joblib
+
+
+model_path = "/content/laptop_buy_decision_tree.joblib"
+model = joblib.load(model_path)
+
+
+
+new_laptop = pd.DataFrame([{
+    "Processor": "i7-13620H",
+    "Memory": 16,
+    "Storage": "512GB",
+    "GPU": "RTX 3050",
+    "Battery": "60Wh"
+}])
+
+
+prediction = model.predict(new_laptop)
+
+print("Recommendation:  ", prediction[0])
+for i in range(10):
+  print("\n")
